@@ -1,6 +1,11 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-
+import Template from './templace'
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'Next.js',
+}
+ 
 export default function Home() {
   return (
     <main className={styles.main}>
