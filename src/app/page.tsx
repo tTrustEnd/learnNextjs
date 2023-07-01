@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Template from './templace'
 import { Metadata } from 'next'
+import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Next.js',
 }
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className={styles.main}>
-      
+        <Link href={'/about'}>About</Link>
       <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

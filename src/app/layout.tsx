@@ -1,18 +1,21 @@
-import Template from "./templace"
+'use client'
+import { Suspense, useState, } from "react"
+import Loading from "./loading"
+import Gem from "./about/gem/page"
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const RootLayout = ({ children,}: {children: React.ReactNode}) => {
+  const [isLogin,setIsLogin] = useState(true)
   return (
     <html lang="en">
       <body>
-        <header>Header</header>
-        <Template >{children}</Template>
+        <header>Header
+        </header>
+        <Suspense fallback={<Loading />}>
+          { isLogin ? children:<Gem/>}
+        </Suspense>
         <footer>Footer</footer>
       </body>
-
     </html>
   )
 }
+export default RootLayout
