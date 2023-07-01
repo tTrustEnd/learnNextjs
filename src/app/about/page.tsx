@@ -6,7 +6,7 @@ export interface IAboutProps {
 export default function About (props: IAboutProps) {
   return (
     <div>
-      hello about
+      hello aboutss
     </div>
   );
 }
